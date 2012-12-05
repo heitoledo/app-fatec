@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ra: MyString
+  nome: MyString
+  telefone: 1
+  turno: MyString
+  titulo_tcc: MyString
+  orientador_tcc: MyString
+  fase_tcc: MyString
+  data_entrada_sem: 1
+  data_entrada_ano: 1
+  data_conclusao_sem: 1
+  data_conclusao_ano: 1
+
+two:
+  ra: MyString
+  nome: MyString
+  telefone: 1
+  turno: MyString
+  titulo_tcc: MyString
+  orientador_tcc: MyString
+  fase_tcc: MyString
+  data_entrada_sem: 1
+  data_entrada_ano: 1
+  data_conclusao_sem: 1
+  data_conclusao_ano: 1

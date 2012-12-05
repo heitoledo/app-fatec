@@ -1,0 +1,30 @@
+<h1>Alunos</h1><br />
+
+<table>
+  <tr>
+    <th>RA</th>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Titulo TCC</th>
+    <th>Orientador TCC</th>
+  </tr>
+
+<% @students.each do |student| %>
+  <tr>
+    <td><%= student.ra %></td>
+    <td><%= student.nome %></td>
+    <td><%= student.email %></td> 
+    <td><%= student.titulo_tcc %></td>
+    <td><%= student.orientador_tcc %></td>
+    <td class="none"><%= link_to 'Mostrar', student, :class => "button" %></td>
+    <td class="none"><%= link_to 'Editar', edit_student_path(student), :class => "button" if student.user_id == current_user.id %></td>
+    <td class="none"><%= link_to 'Deletar', student, method: :delete, data: { confirm: 'Você tem certeza?' }, :class => "button" if student.user_id == current_user.id %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Aluno', new_student_path, :class => "button" %> | 
+
+<%= link_to "Exportar CSV", students_path(format: "csv"), :class => "button" if current_user.admin == true %> 

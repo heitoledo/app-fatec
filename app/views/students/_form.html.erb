@@ -1,0 +1,57 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ra %><br />
+    <%= f.text_field :ra %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :turno %><br />
+    <%= f.select :turno, ([["Diurno"], ["Noturno"]]) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :telefone %><br />
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo_tcc %><br />
+    <%= f.text_field :titulo_tcc %>
+  </div>
+  <div class="field">
+    <%= f.label :orientador_tcc %><br />
+    <%= f.text_field :orientador_tcc %>
+  </div>
+  <div class="field">
+    <%= f.label :fase_tcc %><br />
+    <%= f.select :fase_tcc, ([["1 - Projeto (MPAT)"],["2 - Desenvolvimento"]]) %><br />
+  </div>
+  <div class="field">
+    <%= f.label :data_entrada %><br />
+    <%= f.select :data_entrada_sem, ([["1"], ["2"]]) %>
+    <%= f.select :data_entrada_ano, ([["2010"], ["2011"], ["2012"], ["2013"], ["2014"],["2015"], ["2016"], ["2017"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :data_conclusao %><br />
+    <%= f.select :data_conclusao_sem, ([["1"], ["2"]]) %>
+    <%= f.select :data_conclusao_ano, ([["2010"], ["2011"], ["2012"], ["2013"], ["2014"],["2015"], ["2016"], ["2017"]]) %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Salvar Aluno", :class => "button" %> | 
+    <%= link_to 'Voltar', students_path, :class => "button" %>
+  </div>
+<% end %>

@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>RA:</b>
+  <%= @student.ra %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @student.nome %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= current_user.email %>
+</p>
+<p>
+  <b>Telefone:</b>
+  <%= @student.telefone %>
+</p>
+
+<p>
+  <b>Turno:</b>
+  <%= @student.turno %>
+</p>
+
+<p>
+  <b>Titulo TCC:</b>
+  <%= @student.titulo_tcc %>
+</p>
+
+<p>
+  <b>Orientador TCC:</b>
+  <%= @student.orientador_tcc %>
+</p>
+
+<p>
+  <b>Fase TCC:</b>
+  <%= @student.fase_tcc %>
+</p>
+
+<p>
+  <b>Data Entrada:</b>
+  <%= @student.data_entrada_sem %> / <%= @student.data_entrada_ano %>
+</p>
+
+<p>
+  <b>Data Conclusão:</b>
+  <%= @student.data_conclusao_sem %> / <%= @student.data_conclusao_ano %>
+</p>
+<br />
+<%= link_to 'Editar', edit_student_path(@student), :class => "button" %> |
+<%= link_to 'Voltar', students_path, :class => "button" %>
