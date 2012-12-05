@@ -5,6 +5,6 @@ Utilizado:
   - Rails 3.2.8
   - MySql 5.5
   - Devise 2.1.2
-  - 
+  
 Desenvolvido por: 
   Heitor Toledo (@heitoledo, facebook.com/heitoledo).
